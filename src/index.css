@@ -1,13 +1,32 @@
-body {
+/* src/index.css */
+
+/* Импорт шрифтов с Google Fonts */
+/* MUI по умолчанию использует Roboto, но вы можете переопределить */
+/* Я включил Montserrat и Open Sans в тему MUI выше */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@400;600&display=swap');
+
+/* Минимальный сброс стилей, если MUI не покрывает что-то */
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth; /* Для плавного скролла к якорям */
+}
+
+body {
+  /* MUI ThemeProvider будет управлять шрифтами и цветами body */
+  /* Но вы можете оставить эти для fallback или глобальных сбросов */
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Если вы используете emoji, они должны быть достаточно большими */
+.MuiCard-root .MuiBox-root:first-of-type {
+  /* Это стилизует Box с иконками услуг в карточках */
+  /* Можете добавить здесь специфичные стили, если иконки будут маленькими */
 }

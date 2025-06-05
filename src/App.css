@@ -1,38 +1,94 @@
-.App {
+/* src/App.css */
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+  Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+.button {
+  display: inline-block;
+  background-color: #2980b9;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: background-color 0.2s;
+}
+
+.button:hover {
+  background-color: #1c5980;
+}
+
+.loading {
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 40px 0;
+}
+
+.error {
+  color: #c0392b;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Зададим базовое оформление для каждого раздела */
+.section {
+  padding: 80px 0; /* сверху и снизу по 80px */
+  background-color: #f5f5f5;
+}
+.section:nth-child(even) {
+  background-color: #ffffff; /* чередование фонов (серый-белый) */
+}
+
+.section h2 {
+  margin-bottom: 16px;
+  font-size: 2rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Для «Hero»-блока (главный экран) */
+.hero {
+  height: calc(100vh - 60px); /* экран минус высота Navbar */
+  background: url("https://images.unsplash.com/photo-1581092330601-5821c0b5980b?ixlib=rb-4.0.3&auto=format&fit=crop&w=824&q=80") center/cover no-repeat;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  color: #ffffff;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
 }
-
-.App-link {
-  color: #61dafb;
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 16px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  text-align: center;
+  margin-bottom: 24px;
 }
