@@ -1,5 +1,5 @@
-// src/api/api.js
-const BASE_URL = "http://localhost:6868/api";
+// src/api/api.jsh
+const BASE_URL = "https://back-production-c43b.up.railway.app/";
 
 export async function fetchServices() {
     try {
